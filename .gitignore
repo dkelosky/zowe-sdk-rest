@@ -1,0 +1,6 @@
+node_modules
+lib
+zowe.config.user.json
+web/render/
+web/index.html
+.env
