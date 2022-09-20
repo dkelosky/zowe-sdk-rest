@@ -22,11 +22,10 @@ app.post(`/tso`, async (req, res, next) => {
         base64EncodedAuth,
     });
 
-    // console.log(req.headers.authorization)
+    // console.log(req.headers.authorizatiimage.pngon)
     console.log(`command = '${command}' account = '${account}'`);
 
     try {
-        // return 'key'
         const tso = await IssueTso.issueTsoCommand(session, account, command);
         res.setHeader(`Content-Type`, `text/plan`);
         return res.send(tso.commandResponse);
